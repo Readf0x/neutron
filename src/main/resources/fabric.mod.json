@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "neutron",
 	"version": "${version}",
-	"name": "Create: Neutron",
+	"name": "Neutron",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Foxtrot Studio",
@@ -18,7 +18,7 @@
 	"entrypoints": {
 		"main": [
 			{
-				"value": "org.foxtrot.neutron.CreateNeutron",
+				"value": "org.foxtrot.neutron.Neutron",
 				"adapter": "kotlin"
 			}
 		],
@@ -43,8 +43,5 @@
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*",
 		"create": "${create_version}"
-	},
-	"suggests": {
-		"emi": "${emi_version}"
 	}
 }

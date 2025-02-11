@@ -4,7 +4,7 @@ import com.simibubi.create.Create
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 
-object CreateNeutron : ModInitializer {
+object Neutron : ModInitializer {
 	const val MOD_ID: String = "neutron"
 	const val NAME: String = "Neutron"
     val logger = LoggerFactory.getLogger(MOD_ID)
