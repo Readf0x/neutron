@@ -12,6 +12,9 @@ object Neutron : ModInitializer {
 	override fun onInitialize() {
 		logger.info("Create mod addon [{}] is loading alongside Create [{}]!", NAME, Create.VERSION)
 
+		Gamerules.init()
+		Tab.init()
 		Items.init()
+		Blocks.init()
 	}
 }

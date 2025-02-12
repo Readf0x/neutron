@@ -1,3 +1,5 @@
 {
-  "itemGroup.neutron": "Neutron"
+  "itemGroup.neutron": "Neutron",
+  "block.neutron.test": "Test Block",
+  "gamerule.vanillaPortals": "Allow Vanilla Portal Behavior"
 }

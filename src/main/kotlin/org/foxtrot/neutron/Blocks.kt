@@ -3,15 +3,30 @@ package org.foxtrot.neutron
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.item.BlockItem
+import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.Blocks
+import net.minecraft.world.level.block.SoundType
+import net.minecraft.world.level.block.state.BlockBehaviour
 
 object Blocks {
-    private fun register(block: Block, id: String): Block {
-        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation(Neutron.MOD_ID, id), block)
+    private fun register(block: Block, name: String, shouldRegisterItem: Boolean): Block {
+        val id = ResourceLocation(Neutron.MOD_ID, name)
+        if (shouldRegisterItem) {
+            val blockItem = BlockItem(block, Item.Properties())
+            Registry.register(BuiltInRegistries.ITEM, id, blockItem)
+        }
+        return Registry.register(BuiltInRegistries.BLOCK, id, block)
     }
 
-    val BLOCK = register()
+    val PORTAL_BLOCK = register(
+        Block(BlockBehaviour.Properties.of().sound(SoundType.BONE_BLOCK)),
+        "test",
+        true
+    )
 
     fun init() {
+        Blocks.NETHER_PORTAL
     }
 }
