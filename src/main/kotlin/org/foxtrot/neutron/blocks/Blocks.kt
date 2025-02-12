@@ -1,4 +1,4 @@
-package org.foxtrot.neutron
+package org.foxtrot.neutron.blocks
 
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
+import org.foxtrot.neutron.Neutron
 
 object Blocks {
     private fun register(block: Block, name: String, shouldRegisterItem: Boolean): Block {
@@ -22,7 +23,7 @@ object Blocks {
 
     val PORTAL_BLOCK = register(
         Block(BlockBehaviour.Properties.of().sound(SoundType.BONE_BLOCK)),
-        "test",
+        "portal_block",
         true
     )
 

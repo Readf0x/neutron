@@ -1,4 +1,4 @@
-package org.foxtrot.neutron
+package org.foxtrot.neutron.game
 
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry

@@ -1,4 +1,4 @@
-package org.foxtrot.neutron
+package org.foxtrot.neutron.game
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
@@ -10,9 +10,12 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
+import org.foxtrot.neutron.Neutron
+import org.foxtrot.neutron.blocks.Blocks
 
 object Tab {
-    val GROUP_KEY: ResourceKey<CreativeModeTab> = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), ResourceLocation(Neutron.MOD_ID, "neutron"))
+    val GROUP_KEY: ResourceKey<CreativeModeTab> = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), ResourceLocation(
+        Neutron.MOD_ID, "neutron"))
     val GROUP: CreativeModeTab = FabricItemGroup.builder()
         .icon { ItemStack(Items.OBSIDIAN) }
         .title(Component.translatable("itemGroup.neutron"))

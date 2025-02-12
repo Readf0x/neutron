@@ -24,7 +24,7 @@
 		],
 		"client": [
 			{
-				"value": "org.foxtrot.neutron.CreateNeutronClient",
+				"value": "org.foxtrot.neutron.NeutronClient",
 				"adapter": "kotlin"
 			}
 		]
