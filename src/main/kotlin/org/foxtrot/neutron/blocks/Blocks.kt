@@ -1,5 +1,6 @@
 package org.foxtrot.neutron.blocks
 
+import net.fabricmc.api.ModInitializer
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation
@@ -11,7 +12,7 @@ import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
 import org.foxtrot.neutron.Neutron
 
-object Blocks {
+object Blocks : ModInitializer {
     private fun register(block: Block, name: String, shouldRegisterItem: Boolean): Block {
         val id = ResourceLocation(Neutron.MOD_ID, name)
         if (shouldRegisterItem) {
@@ -27,7 +28,7 @@ object Blocks {
         true
     )
 
-    fun init() {
+    override fun onInitialize() {
         Blocks.NETHER_PORTAL
     }
 }
