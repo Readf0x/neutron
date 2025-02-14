@@ -1,6 +1,7 @@
 package org.foxtrot.neutron
 
 import com.simibubi.create.Create
+import com.simibubi.create.foundation.data.CreateRegistrate
 import net.fabricmc.api.ModInitializer
 import org.foxtrot.neutron.blocks.Blocks
 import org.foxtrot.neutron.entity.Entities
@@ -12,15 +13,17 @@ import org.slf4j.LoggerFactory
 object Neutron : ModInitializer {
 	const val MOD_ID: String = "neutron"
 	const val NAME: String = "Neutron"
-    val logger = LoggerFactory.getLogger(MOD_ID)
+    val LOGGER = LoggerFactory.getLogger(MOD_ID)
+	val REGISTRATE = CreateRegistrate.create(MOD_ID)
 
 	override fun onInitialize() {
-		logger.info("Create mod addon [{}] is loading alongside Create [{}]!", NAME, Create.VERSION)
+		LOGGER.info("Create mod addon [{}] is loading alongside Create [{}]!", NAME, Create.VERSION)
+		REGISTRATE.register()
 
 		Gamerules.onInitialize()
-		Tab.onInitialize()
-		Items.onInitialize()
-		Blocks.onInitialize()
+		Tab.init()
+		Items.init()
+		Blocks.init()
 		Entities.onInitialize()
 	}
 }

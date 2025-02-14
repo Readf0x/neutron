@@ -21,20 +21,10 @@
 				"value": "org.foxtrot.neutron.Neutron",
 				"adapter": "kotlin"
 			}
-		],
-		"client": [
-			{
-				"value": "org.foxtrot.neutron.NeutronClient",
-				"adapter": "kotlin"
-			}
 		]
 	},
 	"mixins": [
-		"neutron.mixins.json",
-		{
-			"config": "neutron.client.mixins.json",
-			"environment": "client"
-		}
+		"neutron.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",

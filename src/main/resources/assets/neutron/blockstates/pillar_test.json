@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "neutron:block/pillar_test_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "neutron:block/pillar_test_vertical"
+    },
+    "axis=z": {
+      "model": "neutron:block/pillar_test_horizontal",
+      "x": 90
+    }
+  }
+}

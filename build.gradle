@@ -39,17 +39,6 @@ configurations.configureEach {
 	}
 }
 
-loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"neutron" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-}
-
 dependencies {
 	// Setup
 	minecraft("com.mojang:minecraft:$minecraft_version")

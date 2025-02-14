@@ -1,0 +1,1 @@
+I'm writing a minecraft fabric mod in Kotlin. `CreateBlockEntityBuilder::instance` and `CreateBlockEntityBuilder::renderer` both want what *would* be `ClassName::new` in java, I've gotten the type error down to it wanting `BiFunction<...>` and recieving `KFunction2<...>` (`KFunction1` in the case of the renderer), how do I resolve this difference?
